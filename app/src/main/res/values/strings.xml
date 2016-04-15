@@ -4,4 +4,8 @@
     <string name="title_button_benar">benar</string>
     <string name="title_text_pertanyaan">Surabaya adalah ibu kota jawa timur</string>
     <string name="button_selanjutnya">selanjutnya</string>
+    <string name="pertannyaan_surabaya">ibukota surabaya saat ini Tri Rismaharini</string>
+    <string name="pertannyaan_jakarta">ibukota Indonesia adalah jakarta</string>
+    <string name="pertannyaan_salah">Thailand merupakan bagian dari Indonesia</string>
+    <string name="pertannyaan_salah1">Malaysia bukan bagian dari ASEAN</string>
 </resources>
