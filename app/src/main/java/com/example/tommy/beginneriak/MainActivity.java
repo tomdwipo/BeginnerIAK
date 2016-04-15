@@ -3,11 +3,12 @@ package com.example.tommy.beginneriak;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Button benarButton;
     private Button salahButton;
-    private Button mTextPertanyaan;
+    private TextView mTextPertanyaan;
 
     private Question[] mQuestionsBank = new Question[]{
             new Question(R.string.pertannyaan_jakarta, true),
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        benarButton = (Button)findViewById(R.id.button_benar);
+        salahButton=(Button)findViewById(R.id.buttom_salah);
+        mTextPertanyaan =(TextView)findViewById(R.id.text_pertanyaan);
 
     }
 }
