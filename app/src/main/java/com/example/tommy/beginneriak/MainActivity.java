@@ -42,7 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 mTextPertanyaan.setText(pertanyaan);
             }
         });
-        ;
+
+        benarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
     }
 }
