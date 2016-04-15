@@ -11,9 +11,23 @@
     tools:context="com.example.tommy.beginneriak.MainActivity">
 
     <TextView
+        android:id="@+id/text_pertanyaan"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Surabaya adalah ibu kota jawa timur"/>
+    <Button
+        android:layout_below="@+id/text_pertanyaan"
+        android:text="benar"
+        android:id="@+id/button_benar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_toRightOf="@+id/button_benar"
+        android:layout_below="@+id/text_pertanyaan"
+        android:text="salah"
+        android:id="@+id/buttom_salah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
