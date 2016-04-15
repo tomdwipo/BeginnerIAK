@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         benarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                checkJawaban(true);
 
             }
         });
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         salahButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                checkJawaban(false);
 
             }
         });
