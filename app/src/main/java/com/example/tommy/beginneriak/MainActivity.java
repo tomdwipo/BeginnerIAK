@@ -50,5 +50,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        salahButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
     }
 }
