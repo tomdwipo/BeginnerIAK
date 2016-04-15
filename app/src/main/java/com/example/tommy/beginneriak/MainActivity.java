@@ -21,19 +21,25 @@ public class MainActivity extends AppCompatActivity {
     };
     private int mIndex = 0;
 
+    private static final String KEY_INDEX = "index";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        benarButton = (Button)findViewById(R.id.button_benar);
-        salahButton=(Button)findViewById(R.id.buttom_salah);
-        selanjutnyaButton = (Button)findViewById(R.id.button_selanjutnya);
-        mTextPertanyaan =(TextView)findViewById(R.id.text_pertanyaan);
+        benarButton = (Button) findViewById(R.id.button_benar);
+        salahButton = (Button) findViewById(R.id.buttom_salah);
+        selanjutnyaButton = (Button) findViewById(R.id.button_selanjutnya);
+        mTextPertanyaan = (TextView) findViewById(R.id.text_pertanyaan);
 
         selanjutnyaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             checkPertanyaan();
+                mIndex = mIndex + 1;
+                if (mIndex >= mQuestionsBank.length) {
+                    mIndex = 0;
+                }
+                checkPertanyaan();
             }
         });
 
@@ -52,26 +58,33 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        if (savedInstanceState != null) {
+            mIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
         checkPertanyaan();
 
 
-
     }
-    private void checkPertanyaan(){
-        mIndex = mIndex+1;
-        if (mIndex>= mQuestionsBank.length){
-            mIndex=0;
-        }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_INDEX, mIndex);
+    }
+
+    private void checkPertanyaan() {
+
         int pertanyaan = mQuestionsBank[mIndex].getTextResId();
         mTextPertanyaan.setText(pertanyaan);
 
     }
-    private void checkJawaban(boolean userPressed){
+
+    private void checkJawaban(boolean userPressed) {
         boolean jawabanBenar = mQuestionsBank[mIndex].isAnswerTrue();
         int jawabanResId = 0;
-        if (userPressed == jawabanBenar){
+        if (userPressed == jawabanBenar) {
             jawabanResId = R.string.toast_benar;
-        }else{
+        } else {
             jawabanResId = R.string.toast_salah;
         }
         Toast.makeText(getApplicationContext(), jawabanResId, Toast.LENGTH_SHORT).show();
