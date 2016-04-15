@@ -1,10 +1,11 @@
 package com.example.tommy.beginneriak;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button benarButton;
@@ -57,5 +58,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+    }
+    private void checkJawaban(boolean userPressed){
+        boolean jawabanBenar = mQuestionsBank[mIndex].isAnswerTrue();
+        int jawabanResId = 0;
+        if (userPressed == jawabanBenar){
+            jawabanResId = R.string.toast_benar;
+        }else{
+            jawabanResId = R.string.toast_salah;
+        }
+        Toast.makeText(getApplicationContext(), jawabanResId, Toast.LENGTH_SHORT).show();
     }
 }

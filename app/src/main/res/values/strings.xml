@@ -8,4 +8,6 @@
     <string name="pertannyaan_jakarta">ibukota Indonesia adalah jakarta</string>
     <string name="pertannyaan_salah">Thailand merupakan bagian dari Indonesia</string>
     <string name="pertannyaan_salah1">Malaysia bukan bagian dari ASEAN</string>
+    <string name="toast_benar">benar</string>
+    <string name="toast_salah">salah</string>
 </resources>
