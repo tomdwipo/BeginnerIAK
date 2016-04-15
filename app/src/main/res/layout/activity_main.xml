@@ -48,6 +48,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearlayout"
         android:layout_centerHorizontal="true"
-        android:text="selanjutnya"/>
+        android:text="@string/button_selanjutnya"/>
 
 </RelativeLayout>
