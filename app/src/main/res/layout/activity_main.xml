@@ -11,7 +11,9 @@
     tools:context="com.example.tommy.beginneriak.MainActivity">
 
     <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="Surabaya adalah ibu kota jawa timur"/>
 </RelativeLayout>
