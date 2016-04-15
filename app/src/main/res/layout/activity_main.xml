@@ -17,17 +17,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Surabaya adalah ibu kota jawa timur"/>
-    <Button
+    <LinearLayout
+        android:padding="16dp"
+        android:gravity="center"
         android:layout_below="@+id/text_pertanyaan"
-        android:text="benar"
-        android:id="@+id/button_benar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:layout_toRightOf="@+id/button_benar"
-        android:layout_below="@+id/text_pertanyaan"
-        android:text="salah"
-        android:id="@+id/buttom_salah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="benar"
+            android:id="@+id/button_benar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:text="salah"
+            android:id="@+id/buttom_salah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
 </RelativeLayout>
